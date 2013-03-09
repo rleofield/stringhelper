@@ -1,0 +1,5 @@
+/Debug/
+/.tmp/
+/bin/
+/*.pro.user
+/Makefile
