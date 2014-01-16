@@ -5,7 +5,7 @@ CONFIG += console
 CONFIG -= qt
 
 
-DESTDIR += bin
+#DESTDIR += bin
 CONFIG  += x86_64
 
 OBJECTS_DIR = .tmp
@@ -13,6 +13,7 @@ MOC_DIR = .tmp
 UI_DIR = .tmp
 RCC_DIR = .tmp
 
+QMAKE_CXXFLAGS += -gdwarf-3
 
 QMAKE_CXXFLAGS_DEBUG += -O0
 QMAKE_CXXFLAGS_DEBUG += -std=c++0x
@@ -23,6 +24,7 @@ QMAKE_CXXFLAGS_DEBUG += -Wextra
 QMAKE_CXXFLAGS_DEBUG += -Wunused-parameter
 QMAKE_CXXFLAGS_DEBUG -= -Wwrite-strings
 QMAKE_CXXFLAGS_DEBUG -= -Wunused-variable
+QMAKE_CXXFLAGS_DEBUG += -Wno-unused-variable
 QMAKE_CXXFLAGS_DEBUG += -Weffc++
 
 QMAKE_CXXFLAGS_RELEASE += -O2
@@ -34,6 +36,7 @@ QMAKE_CXXFLAGS_RELEASE += -Wextra
 QMAKE_CXXFLAGS_RELEASE += -Wunused-parameter
 QMAKE_CXXFLAGS_RELEASE -= -Wwrite-strings
 QMAKE_CXXFLAGS_RELEASE -= -Wunused-variable
+QMAKE_CXXFLAGS_RELEASE += -Wno-unused-variable
 QMAKE_CXXFLAGS_RELEASE += -Weffc++
 
 
@@ -41,4 +44,4 @@ SOURCES += src/main.cpp src/stringhelper.cpp src/gettokens.cpp
 
 HEADERS +=  src/stringhelper.h src/gettokens.h
 
-
+message("qmake strings")

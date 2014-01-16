@@ -54,7 +54,7 @@ namespace ral {
            Das Template sollte nicht 'to_string' genannt werden, ergibt u.U. Konflikt mit Namespace 'std' und C++11
 
 
-      <li>   Definition von to_string() in C++11 (aktueller GCC und VS2010)
+       Definition von to_string() in C++11 (aktueller GCC und VS2010)
 
       \li \c  std::string to_string( int value );
       \li \c   std::string to_string( long value );
@@ -69,8 +69,6 @@ namespace ral {
 
 
            \param val Wert, der konvertiert werden soll
-           \param w   Ausgabebreite
-           \param format Gleitkommaformat, default: "%6.3lf"
          */
       template<class T >
       inline std::string toString( T val ) {
@@ -88,7 +86,7 @@ namespace ral {
 
            \param val double Wert, der konvertiert werden soll
            \param w   Ausgabebreite, default = 6
-           \param format Gleitkommaformat, default: "%6.3lf"
+           \param prec Gleitkommaformat, default: "%6.3lf"
          */
       inline std::string toString( double val, size_t w = 6, size_t prec = 3 ) {
          std::ostringstream o;
@@ -104,8 +102,6 @@ namespace ral {
       /*! Konvertiert einen Wert in einen String, Spezialisierung mit 'bool'.
 
            \param b bool Wert, der konvertiert werden soll
-           \param w   Ausgabebreite, default = 6
-           \param format Gleitkommaformat, default: "%6.3lf"
          */
 
       inline std::string toString( bool b ) {
@@ -297,7 +293,7 @@ namespace ral {
 
       std::vector<std::string> tokenize( std::string const& str, const std::string& delimiters = " " );
       std::vector<std::string> split( std::string const& line, std::string const& delimiters = " " );
-
+      std::vector<std::string> split( std::string const& l, char delim );
 
    } // end ns strings
 

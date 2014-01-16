@@ -383,15 +383,20 @@ namespace ral {
          return tokens;
       }
 
+
       vector<string> split( string const& l, string const& delimiters ) {
          vector<string> v = tokenize( l, delimiters );
          return v;
       }
-
+      vector<string> split( string const& l, char delim ) {
+         string d;
+         d += delim;
+         return split( l, d );
+      }
 
    }
 
 
 } // end ns ral
 
-//EOFheise
+//EOF

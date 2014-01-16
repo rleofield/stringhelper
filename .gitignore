@@ -1,4 +1,6 @@
 /.tmp/
-/bin/
+/Debug/
+strings
+
 /*.pro.user
 /Makefile
