@@ -18,46 +18,17 @@
  ------------------------------------------------------------------------------
 */
 
+#ifndef rlf_test_hstring_H
+#define rlf_test_hstring_H
 
-#include <string>
-
-#include <istream>
-#include <iostream>
-#include <sstream>
-#include <fstream>
-#include <iomanip>
-#include <algorithm>
+namespace test_hstring{
+   void test1();
+   void test2();
+}
 
 
-#include "gettokens.h"
-#include "stringhelper.h"
+#endif
 
-using namespace std;
-
-namespace ral {
-
-   namespace tokens {
+//EOF
 
 
-      tTokens::tTokens( const string& s, string const& delims ): _buffer() {
-         string temp = s;
-         size_t pos = temp.find_first_of( delims );
-
-         while( pos != string::npos ) {
-            string t = strings::trim( temp.substr( 0, pos ) );
-
-            if( t.length() > 0 ) {
-               _buffer.push_back( t );
-            }
-
-            temp = strings::trim( temp.substr( pos + 1 ) );
-            pos = temp.find_first_of( delims );
-         }
-
-         _buffer.push_back( strings::trim( temp ) );
-      }
-
-   } // end ns tokens
-} // end ns ral
-
-// EOF

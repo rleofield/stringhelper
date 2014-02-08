@@ -25,6 +25,7 @@ QMAKE_CXXFLAGS_DEBUG += -Wunused-parameter
 QMAKE_CXXFLAGS_DEBUG -= -Wwrite-strings
 QMAKE_CXXFLAGS_DEBUG -= -Wunused-variable
 QMAKE_CXXFLAGS_DEBUG += -Wno-unused-variable
+QMAKE_CXXFLAGS_DEBUG += -Wno-unused-but-set-variable
 QMAKE_CXXFLAGS_DEBUG += -Weffc++
 
 QMAKE_CXXFLAGS_RELEASE += -O2
@@ -39,9 +40,21 @@ QMAKE_CXXFLAGS_RELEASE -= -Wunused-variable
 QMAKE_CXXFLAGS_RELEASE += -Wno-unused-variable
 QMAKE_CXXFLAGS_RELEASE += -Weffc++
 
+              ^
 
-SOURCES += src/main.cpp src/stringhelper.cpp src/gettokens.cpp
+SOURCES += src/main.cpp \
+    src/hstring/stringhelper.cpp \
+    src/hstring/gettokens.cpp \
+    src/test_hstring.cpp \
+    src/test1.cpp
 
-HEADERS +=  src/stringhelper.h src/gettokens.h
+HEADERS +=  \
+    src/hstring/stringhelper.h \
+    src/hstring/gettokens.h \
+    src/test_hstring.h
+
+INCLUDEPATH += $$PWD/src
+INCLUDEPATH += $$PWD/src/hstring
+
 
 message("qmake strings")

@@ -26,24 +26,23 @@
 #include <vector>
 
 
-namespace ral {
-   namespace tokens {
+namespace rlf_hstring {
 
-      class tTokens {
-         std::vector<std::string> _buffer;
-         tTokens( tTokens const& );
-         void operator=( tTokens const& );
-      public:
-         tTokens( const std::string& str, std::string const& delims = " " );
-         ~tTokens() {}
-         std::vector<std::string> operator()()const {
-            return _buffer;
-         }
+   class tTokens {
+      std::vector<std::string> _buffer;
+      tTokens( tTokens const& );
+      void operator=( tTokens const& );
+   public:
+      tTokens( const std::string& str, std::string const& delims = " " );
+      ~tTokens() {}
+      std::vector<std::string> operator()()const {
+         return _buffer;
+      }
 
-      };
+   };
 
-   } // end ns tokens
-} //end ns ral
+} // end ns rlf_hstring
+
 
 
 
