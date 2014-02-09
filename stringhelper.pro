@@ -57,4 +57,8 @@ INCLUDEPATH += $$PWD/src
 INCLUDEPATH += $$PWD/src/hstring
 
 
-message("qmake strings")
+message("qmake stringhelper")
+
+OTHER_FILES += \
+    lgpl-3.0.txt \
+    README.md
