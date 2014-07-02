@@ -336,7 +336,7 @@ namespace test_hstring{
 
          // char index von links
 
-         size_t ist = index( "einW an Position 3", 'W' ) ;
+         size_t ist = rlf_hstring::index( "einW an Position 3", 'W' ) ;
          size_t soll = 3 ;
          int debug_i = 0;
       }
@@ -380,7 +380,7 @@ namespace test_hstring{
 
          // index nicht gefunden, return ist immer 'string::npos' (nicht -1 verwenden)
 
-         size_t ist = index( "einW an Position 3", 'w' ) ;
+         size_t ist = rlf_hstring::index( "einW an Position 3", 'w' ) ;
          size_t soll = string::npos ; // 'w' war eine kleines 'w'
 
 

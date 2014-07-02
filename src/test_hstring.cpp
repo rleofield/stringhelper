@@ -503,7 +503,7 @@ void TestStrings::test_index_at_char() {
 
    // char index von links
 
-   size_t ist = index( "einW an Position 3", 'W' ) ;
+   size_t ist = rlf_hstring::index( "einW an Position 3", 'W' ) ;
    size_t soll = 3 ;
    VERIFY( ist == soll, msgFail( "index()", ist, soll ) );
 }
@@ -547,7 +547,7 @@ void TestStrings::test_index_not_found() {
 
    // index nicht gefunden, return ist immer 'string::npos' (nicht -1 verwenden)
 
-   size_t ist = index( "einW an Position 3", 'w' ) ;
+   size_t ist = rlf_hstring::index( "einW an Position 3", 'w' ) ;
    size_t soll = string::npos ; // 'w' war eine kleines 'w'
    VERIFY( ist == soll, msgFail( "index(), nicht gefunden", ist, soll ) );
 
