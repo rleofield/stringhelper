@@ -24,6 +24,8 @@
 #include "stringhelper.h"
 #include "test_hstring.h"
 
+
+
 using namespace std;
 using rlf_hstring::string2type;
 using rlf_hstring::toString;

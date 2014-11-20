@@ -22,6 +22,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "stringhelper.h"
 #include "test_hstring.h"
 
+
+
+
 using namespace std;
 using rlf_hstring::string2type;
 using rlf_hstring::toString;
