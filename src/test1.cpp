@@ -23,6 +23,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "test_hstring.h"
 
 
+#ifdef _WIN32
+#pragma warning( disable : 4309 ) // Warning  truncation of constant value in line 128
+#endif
 
 
 using namespace std;
@@ -61,7 +64,7 @@ using rlf_hstring::remove_first;
 using rlf_hstring::split;
 
 
-namespace test_hstring{
+namespace test_hstring {
 
    // bitte Breakpoints mit dem debugger an 'int debug_i = 0' einfuegen
    // danach kann man die Werte im Debugger vergleichen

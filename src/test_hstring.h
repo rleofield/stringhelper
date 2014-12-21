@@ -21,7 +21,7 @@
 #ifndef rlf_test_hstring_H
 #define rlf_test_hstring_H
 
-namespace test_hstring{
+namespace test_hstring {
    void test1();
    void test2();
 }
