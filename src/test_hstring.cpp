@@ -25,9 +25,6 @@
 #include "test_hstring.h"
 
 
-#ifdef _WIN32
-#pragma warning( disable : 4309 ) // Warning  truncation of constant value in function test_int_to_hex_0x 
-#endif
 
 using namespace std;
 using rlf_hstring::string2type;
